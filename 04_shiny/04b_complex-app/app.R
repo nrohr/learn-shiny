@@ -104,7 +104,7 @@ server <- function(input, output) {
     output$anomalyPlot <- renderPlotly({
         hpi_filtered() %>% 
             group_by(division) %>% 
-            plot_anomaly_diagnostics(date, hpi, .color_var = division, .interactive = TRUE)
+            plot_anomaly_diagnostics(date, hpi, .interactive = TRUE)
     })
 }
 
